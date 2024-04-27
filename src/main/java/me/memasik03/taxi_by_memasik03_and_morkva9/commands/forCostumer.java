@@ -24,13 +24,41 @@ public class forCostumer implements CommandExecutor {
         double senderX = Math.round(Bukkit.getPlayer(sender.getName()).getLocation().getX());
         double senderY = Math.round(Bukkit.getPlayer(sender.getName()).getLocation().getY());
         double senderZ = Math.round(Bukkit.getPlayer(sender.getName()).getLocation().getZ());
+        double destinationX = 129;
+        double destinationY = 72;
+        double destinationZ = -369;
+        double distanceX = 0;
+        double distanceY = 0;
+        double distanceZ = 0;
+        double distanceAll = 0; 
+
+        if (senderX > destinationX) {
+            distanceX = senderX - destinationX;
+        } else {
+            distanceX = senderX + destinationX;
+        };
+
+        if (senderY > destinationY) {
+            distanceY = senderY - destinationY;
+        } else {
+            distanceY = senderY + destinationY;
+        };
+
+        if (senderZ > destinationZ) {
+            distanceZ = senderZ - destinationZ;
+        } else {
+            distanceZ = senderZ + destinationZ;
+        };
+
+        distanceAll = distanceX + distanceY + distanceZ;
+
 
         for (int i = 0; i < taxists.length; i++) {
-            Bukkit.getPlayer(taxists[i]).sendMessage("Вас хочет " + sender.getName() + " на Х " + senderX + "Y "
-                    + senderY + "Z " + senderZ + "\n Принять заказ: /taxi accept" + sender.getName());
+            Bukkit.getPlayer(taxists[i]).sendMessage("Новый заказ от " + sender.getName() + "! Точка отправления: Х " + senderX + " Y "
+                    + senderY + " Z " + senderZ + "Точка назначения: X " + destinationX + " Y " + destinationY + " Z " + distanceAll + "\n Принять заказ: /taxi accept" + sender.getName());
         }
     }
 }
 
 // кжл кайфует и почти нихуя не пишет (лох не знает джаву) (я тоже) (я тоже) (я
-// тоже) (ne) (ano)
+// тоже) (ne) (ano) (ja jsem krava-femboy mooo moo)
