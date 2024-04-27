@@ -1,0 +1,12 @@
+name: taxi_plugin
+version: '1.0-SNAPSHOT'
+main: me.memasik03.taxi_by_memasik03_and_morkva9.TaxiPlugin
+api-version: '1.20'
+api: "hui"
+authors: [memasik03, MorKva9]
+description: Do you need taxi? /taxi!
+website: https://discord.gg/cXuAV8EPxJ
+
+commands:
+  taxi: 
+    description: /taxi to taxi
